@@ -1,4 +1,8 @@
-.book-item {
-  margin: 10px;
-  border: 2px solid #cccccc;
+.card.book-image {
+  width: 300px;
+}
+
+.book-image img {
+  width: 300px;
+  height: 300px;
 }

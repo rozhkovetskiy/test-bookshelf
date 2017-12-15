@@ -1,3 +1,12 @@
-<p>
-  book-details works!
-</p>
+<div class="container ">
+  <div class="card book-image mx-auto mt-5" *ngIf="book">
+    <img class="card-img-top" src="../../assets/img/book.png" alt="Book image">
+    <div class="card-body">
+      <h4 class="card-title">{{book.name}}</h4>
+      <p class="card-text">author: {{book.author}}</p>
+      <p class="card-text">total pages: {{book.pages}}</p>
+      <p class="card-text">date of publication: {{book.publish | date: 'MM/dd/yyyy'}}</p>
+      <a class="btn btn-warning right" routerLink="/books">Back</a>
+    </div>
+  </div>
+</div>
