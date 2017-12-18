@@ -10,6 +10,11 @@
       <a class="btn btn-info" [routerLink]="['/books', book.id]">Details</a>
     </li>
   </ul>
-  <pagination-controls id="books"
-                       (pageChange)="page = $event"></pagination-controls>
+  <div class="book-pagination">
+    <pagination-controls id="books"
+                         (pageChange)="page = $event"
+                         previousLabel="Prev"
+                         nextLabel="Next">
+    </pagination-controls>
+  </div>
 </div>

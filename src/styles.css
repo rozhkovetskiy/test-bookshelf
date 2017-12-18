@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.book-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.book-pagination ul {
+  padding-left: 0;
+}
