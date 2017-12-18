@@ -1,12 +1,15 @@
-<div class="container">
+<div class="container" *ngIf="books">
   <h2>Bookshelf</h2>
   <ul class="list-group">
-    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let book of books">
+    <li class="list-group-item d-flex justify-content-between align-items-center mb-2"
+        *ngFor="let book of books | sortBy: 'name' | paginate: { id: 'books', itemsPerPage: 5, currentPage: page }">
       <div>
         <span class="oi oi-book" title="book" aria-hidden="true"></span>
         {{book.name}}
       </div>
-      <a class="btn btn-info" routerLink="/books/{{book.id}}">Details</a>
+      <a class="btn btn-info" [routerLink]="['/books', book.id]">Details</a>
     </li>
   </ul>
+  <pagination-controls id="books"
+                       (pageChange)="page = $event"></pagination-controls>
 </div>

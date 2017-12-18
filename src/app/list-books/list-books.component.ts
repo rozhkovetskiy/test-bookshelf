@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 
 import { BookService } from '../shared/book.service';
 import { Book } from '../shared/interfaces/book.interface';
@@ -6,11 +6,11 @@ import { Book } from '../shared/interfaces/book.interface';
 @Component({
   selector: 'app-list-books',
   templateUrl: './list-books.component.html',
-  styleUrls: ['./list-books.component.css']
+  styleUrls: ['./list-books.component.css'],
 })
 export class ListBooksComponent implements OnInit {
   public books: Book[];
-
+  public page = 1;
   constructor(
     private bookService: BookService) { }
 
